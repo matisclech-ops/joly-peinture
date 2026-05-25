@@ -464,6 +464,7 @@ textarea { resize: vertical; }
 .form-success { text-align: center; color: #2e7d32; font-weight: 600; font-size: 14px; padding: 12px; background: #f1f8f1; border-radius: 8px; }
 .form-note { text-align: center; color: #555; font-size: 13px; line-height: 1.6; padding: 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
 .form-note a { color: var(--accent); font-weight: 600; }
+.form-rgpd { font-size: 11px; color: #888; line-height: 1.5; text-align: center; margin-top: -4px; }
 
 /* ===== FOOTER ===== */
 footer { background: var(--darker); overflow: hidden; }
