@@ -4,9 +4,13 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // Header shadow on scroll
 const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 50);
-}, { passive: true });
+if (header) {
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+}
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
@@ -24,6 +28,10 @@ revealEls.forEach(el => revealObs.observe(el));
 function animateCounter(el) {
   const target = parseFloat(el.dataset.target);
   const decimals = parseInt(el.dataset.decimal) || 0;
+  if (reduceMotion) {
+    el.textContent = decimals ? target.toFixed(decimals) : target;
+    return;
+  }
   const duration = 1400;
   const start = performance.now();
   (function update(now) {
@@ -53,10 +61,12 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     document.querySelectorAll('.faq-item.open').forEach(i => {
       i.classList.remove('open');
       i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      i.querySelector('.faq-a').setAttribute('aria-hidden', 'true');
     });
     if (!isOpen) {
       item.classList.add('open');
       btn.setAttribute('aria-expanded', 'true');
+      item.querySelector('.faq-a').setAttribute('aria-hidden', 'false');
     }
   });
 });
