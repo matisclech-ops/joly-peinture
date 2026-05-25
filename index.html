@@ -10,6 +10,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://joly-peinture.fr/og-image.jpg" />
   <meta property="og:url" content="https://joly-peinture.fr/" />
+  <meta property="og:site_name" content="Joly Peinture" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Joly Peinture — Artisan peintre à Orléans" />
+  <meta name="twitter:description" content="⭐ 4.9/5 · 90 avis Google. Devis gratuit sous 48h." />
+  <meta name="twitter:image" content="https://joly-peinture.fr/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -152,25 +157,25 @@
           <div class="service-num">01</div>
           <h3>Peinture intérieure</h3>
           <p>Murs, plafonds, boiseries. Travail soigné, protection de vos biens, finitions parfaites. Vous rentrez dans un intérieur neuf.</p>
-          <span class="service-link">En savoir plus →</span>
+          <a href="#contact" class="service-link">En savoir plus →</a>
         </div>
         <div class="service-card reveal">
           <div class="service-num">02</div>
           <h3>Peinture extérieure</h3>
           <p>Ravalement de façades, pignons, volets. Protection durable contre les intempéries et finition impeccable.</p>
-          <span class="service-link">En savoir plus →</span>
+          <a href="#contact" class="service-link">En savoir plus →</a>
         </div>
         <div class="service-card reveal">
           <div class="service-num">03</div>
           <h3>Décoration &amp; finitions</h3>
           <p>Enduits décoratifs, effets de matière, béton ciré. Pour des espaces qui vous ressemblent.</p>
-          <span class="service-link">En savoir plus →</span>
+          <a href="#contact" class="service-link">En savoir plus →</a>
         </div>
         <div class="service-card reveal">
           <div class="service-num">04</div>
           <h3>Devis gratuit sous 48h</h3>
           <p>Déplacement gratuit et sans engagement. Nous évaluons votre projet et vous proposons un devis détaillé sous 48h.</p>
-          <span class="service-link">Demander un devis →</span>
+          <a href="#contact" class="service-link">Demander un devis →</a>
         </div>
       </div>
     </div>
@@ -319,6 +324,7 @@
         </div>
       </div>
       <div class="contact-right">
+        <!-- Formspree : remplacer YOUR_FORM_ID par l'identifiant du formulaire créé sur formspree.io -->
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-group">
             <label for="fname">Votre nom</label>
@@ -350,6 +356,7 @@
           </div>
           <button type="submit" class="btn-primary full" id="submitBtn">Envoyer la demande</button>
           <div class="form-success" id="formSuccess" hidden>✅ Message envoyé ! Nous vous répondons sous 48h.</div>
+          <p class="form-note" id="formNote" hidden>Le formulaire sera actif dès la mise en ligne. En attendant, écrivez-nous sur <a href="https://wa.me/33651294455" target="_blank" rel="noopener">WhatsApp</a> ou appelez le <a href="tel:0651294455">06 51 29 44 55</a>.</p>
         </form>
       </div>
     </div>
@@ -375,7 +382,7 @@
     </div>
     <div class="footer-monumental" aria-hidden="true">JOLY</div>
     <div class="container footer-bottom">
-      <span>© 2025 Joly Peinture · Orléans</span>
+      <span>© <span id="year">2026</span> Joly Peinture · Orléans</span>
     </div>
   </footer>
 

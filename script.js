@@ -1,3 +1,7 @@
+// Footer year
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 // Header shadow on scroll
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
@@ -64,6 +68,10 @@ const submitBtn = document.getElementById('submitBtn');
 if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (form.action.includes('YOUR_FORM_ID')) {
+      document.getElementById('formNote').hidden = false;
+      return;
+    }
     submitBtn.textContent = 'Envoi en cours…';
     submitBtn.disabled = true;
     try {
