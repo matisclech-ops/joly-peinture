@@ -1,3 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ui-background: 40 33% 96%;
+    --ui-foreground: 0 0% 17%;
+    --ui-card: 0 0% 100%;
+    --ui-primary: 6 64% 46%;
+    --ui-muted: 36 30% 92%;
+    --ui-muted-foreground: 0 0% 45%;
+    --ui-border: 39 20% 87%;
+    --radius: 0.75rem;
+  }
+}
+
+/* ============================================================
+   Brand styles (migrés depuis l'ancien style.css — inchangés)
+   ============================================================ */
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
