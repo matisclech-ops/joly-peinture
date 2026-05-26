@@ -7,10 +7,20 @@
     --ui-background: 40 33% 96%;
     --ui-foreground: 0 0% 17%;
     --ui-card: 0 0% 100%;
+    --ui-card-foreground: 0 0% 17%;
     --ui-primary: 6 64% 46%;
+    --ui-primary-foreground: 0 0% 100%;
+    --ui-secondary: 36 30% 87%;
+    --ui-secondary-foreground: 0 0% 17%;
     --ui-muted: 36 30% 92%;
     --ui-muted-foreground: 0 0% 45%;
+    --ui-accent: 36 30% 87%;
+    --ui-accent-foreground: 0 0% 17%;
+    --ui-destructive: 0 72% 51%;
+    --ui-destructive-foreground: 0 0% 100%;
     --ui-border: 39 20% 87%;
+    --ui-input: 39 20% 87%;
+    --ui-ring: 6 64% 46%;
     --radius: 0.75rem;
   }
 }

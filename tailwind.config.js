@@ -15,16 +15,33 @@ export default {
       },
       colors: {
         border: "hsl(var(--ui-border))",
+        input: "hsl(var(--ui-input))",
+        ring: "hsl(var(--ui-ring))",
         background: "hsl(var(--ui-background))",
         foreground: "hsl(var(--ui-foreground))",
-        card: "hsl(var(--ui-card))",
+        card: {
+          DEFAULT: "hsl(var(--ui-card))",
+          foreground: "hsl(var(--ui-card-foreground))",
+        },
         primary: {
           DEFAULT: "hsl(var(--ui-primary))",
-          foreground: "hsl(var(--ui-background))",
+          foreground: "hsl(var(--ui-primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--ui-secondary))",
+          foreground: "hsl(var(--ui-secondary-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--ui-muted))",
           foreground: "hsl(var(--ui-muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--ui-accent))",
+          foreground: "hsl(var(--ui-accent-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--ui-destructive))",
+          foreground: "hsl(var(--ui-destructive-foreground))",
         },
       },
       borderRadius: {
