@@ -543,6 +543,62 @@ footer { background: var(--darker); overflow: hidden; }
   90% { transform: translateY(-4px); }
 }
 
+/* ===== FOOTER LEGAL LINK + MODAL ===== */
+.footer-bottom { gap: 10px; }
+.footer-bottom-sep { color: rgba(255,255,255,0.35); font-size: 12px; }
+.footer-legal-link {
+  background: none; border: none; padding: 0; cursor: pointer;
+  font-family: inherit; font-size: 12px;
+  color: rgba(255,255,255,0.55); text-decoration: underline;
+  text-underline-offset: 3px; transition: color 0.2s;
+}
+.footer-legal-link:hover { color: white; }
+
+.legal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.55);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px; animation: legal-fade 0.18s ease-out;
+}
+.legal-dialog {
+  position: relative;
+  background: white; color: var(--dark);
+  width: 100%; max-width: 720px; max-height: 88vh;
+  overflow-y: auto; border-radius: 16px;
+  padding: 36px 36px 32px;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.35);
+  animation: legal-pop 0.22s ease-out;
+}
+.legal-close {
+  position: absolute; top: 12px; right: 14px;
+  width: 36px; height: 36px; border: none; background: transparent;
+  font-size: 28px; line-height: 1; color: var(--muted); cursor: pointer;
+  border-radius: 8px; transition: background 0.15s, color 0.15s;
+}
+.legal-close:hover { background: var(--bg); color: var(--dark); }
+
+.legal-h2 {
+  font-family: 'Playfair Display', serif; font-weight: 800;
+  font-size: 32px; margin-bottom: 24px; color: var(--dark);
+}
+.legal-content section { margin-bottom: 24px; }
+.legal-content h3 {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 15px; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.legal-content p { font-size: 14px; line-height: 1.75; color: #444; margin-bottom: 10px; }
+.legal-content p:last-child { margin-bottom: 0; }
+.legal-content a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.legal-todo {
+  color: var(--accent); font-style: italic; font-weight: 600;
+  background: rgba(192,57,43,0.08); padding: 1px 6px; border-radius: 4px;
+}
+
+@keyframes legal-fade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes legal-pop  { from { opacity: 0; transform: translateY(8px) scale(0.98) } to { opacity: 1; transform: none } }
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
