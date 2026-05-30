@@ -18,7 +18,7 @@ export default function Header() {
     <header id="header" className={scrolled ? "scrolled" : ""}>
       <div className="container header-inner">
         <a href="#" className="logo-link" aria-label="Joly Peinture — Accueil">
-          <img src="/logo.svg" alt="Joly Peinture" className="logo-img" width={56} height={56} />
+          <img src="/logo.jpg" alt="Joly Peinture" className="logo-img" width={56} height={56} />
         </a>
         <nav className="header-nav" aria-label="Navigation principale">
           <a href="#services">Services</a>

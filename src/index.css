@@ -120,7 +120,7 @@ a { text-decoration: none; color: inherit; }
 .whatsapp-float:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
 /* ===== LOGO ===== */
-.logo-img { display: block; flex-shrink: 0; }
+.logo-img { display: block; flex-shrink: 0; border-radius: 50%; object-fit: cover; }
 .logo-img--footer { opacity: 0.8; }
 
 /* ===== HEADER ===== */

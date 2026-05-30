@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="container footer-top">
         <div className="footer-logo">
           <img
-            src="/logo.svg"
+            src="/logo.jpg"
             alt="Joly Peinture"
             className="logo-img logo-img--footer"
             width={52}
