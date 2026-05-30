@@ -2,6 +2,13 @@ import { Gallery4, type Gallery4Item } from "@/components/ui/gallery4";
 
 const ITEMS: Gallery4Item[] = [
   {
+    id: "salon-avant-apres",
+    title: "Salon · Avant / Après",
+    description: "Murs et escalier intégralement rénovés — peinture intérieure et finitions bicolores.",
+    href: "#contact",
+    image: "/realisations/salon-avant-apres.jpg",
+  },
+  {
     id: "interieur",
     title: "Peinture intérieure",
     description: "Murs, plafonds et boiseries — finitions soignées et protection complète de vos pièces.",
