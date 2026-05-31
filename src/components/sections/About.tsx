@@ -38,10 +38,12 @@ export default function About() {
           </div>
         </div>
         <div className="about-img reveal">
-          <div className="about-placeholder">
-            <span className="placeholder-icon">🎨</span>
-            <span>Photo artisan / chantier</span>
-          </div>
+          <img
+            src="/about-salon.jpg"
+            alt="Salon repeint par Joly Peinture — finitions soignées"
+            className="about-photo"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
