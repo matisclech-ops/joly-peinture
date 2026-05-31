@@ -112,26 +112,13 @@ const Gallery4 = ({
                 key={item.id}
                 className="max-w-[320px] pl-[20px] lg:max-w-[360px]"
               >
-                <a href={item.href} className="group rounded-xl">
+                <a href={item.href} className="group rounded-xl block">
                   <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
                     <img
                       src={item.image}
                       alt={item.title}
                       className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 h-full bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0)_40%,rgba(0,0,0,0.85)_100%)]" />
-                    <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 text-primary-foreground md:p-8">
-                      <div className="mb-2 pt-4 text-xl font-semibold md:mb-3">
-                        {item.title}
-                      </div>
-                      <div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9">
-                        {item.description}
-                      </div>
-                      <div className="flex items-center text-sm">
-                        En savoir plus
-                        <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
-                      </div>
-                    </div>
                   </div>
                 </a>
               </CarouselItem>
