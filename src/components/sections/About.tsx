@@ -1,4 +1,5 @@
 import StatNumber from "@/components/StatNumber";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 export default function About() {
   return (
@@ -38,11 +39,11 @@ export default function About() {
           </div>
         </div>
         <div className="about-img reveal">
-          <img
-            src="/about-salon.jpg"
-            alt="Salon repeint par Joly Peinture — finitions soignées"
-            className="about-photo"
-            loading="lazy"
+          <BeforeAfterSlider
+            beforeSrc="/about-avant.jpg"
+            afterSrc="/about-apres.jpg"
+            beforeAlt="Chambre avant rénovation par Joly Peinture"
+            afterAlt="Chambre après rénovation par Joly Peinture"
           />
         </div>
       </div>
