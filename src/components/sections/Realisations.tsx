@@ -9,11 +9,11 @@ const ITEMS: Gallery4Item[] = [
     image: "/realisations/salon-avant-apres.jpg",
   },
   {
-    id: "interieur",
-    title: "Peinture intérieure",
-    description: "Murs, plafonds et boiseries — finitions soignées et protection complète de vos pièces.",
+    id: "chambre-avant-apres",
+    title: "Chambre · Avant / Après",
+    description: "Lambris peint en blanc, mur d'accent bleu pétrole — relooking complet d'une chambre sous combles.",
     href: "#contact",
-    image: "/realisations/interieur.jpg",
+    image: "/realisations/chambre-avant-apres.jpg",
   },
   {
     id: "facade",
