@@ -56,9 +56,9 @@ export default function Realisations() {
   return (
     <Gallery4
       id="realisations"
-      label="(réalisations)"
-      title="Quelques chantiers récents"
-      description="Aperçu de nos prestations. Photos d'exemple — bientôt remplacées par de vrais chantiers."
+      label="(avant / après)"
+      title="Exemples de travaux"
+      description="Du chantier brut à la finition impeccable — chaque pièce reprend vie."
       items={ITEMS}
       className="bg-secondary"
     />
