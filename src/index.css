@@ -386,6 +386,7 @@ a { text-decoration: none; color: inherit; }
 .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
 .service-card {
+  display: block;
   background: white; border: 1px solid var(--border);
   border-radius: var(--radius); padding: 36px 32px;
   border-left: 4px solid transparent;

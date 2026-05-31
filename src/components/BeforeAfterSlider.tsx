@@ -11,6 +11,7 @@ export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afte
   const [pos, setPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
+  const userInteracted = useRef(false);
 
   const updateFromClientX = (clientX: number) => {
     const el = containerRef.current;
@@ -21,44 +22,83 @@ export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afte
     setPos(p);
   };
 
-  useEffect(() => {
-    const onMove = (e: PointerEvent) => {
-      if (!dragging.current) return;
-      e.preventDefault();
-      updateFromClientX(e.clientX);
-    };
-    const onUp = () => {
-      dragging.current = false;
-    };
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", onUp);
-    window.addEventListener("pointercancel", onUp);
-    return () => {
-      window.removeEventListener("pointermove", onMove);
-      window.removeEventListener("pointerup", onUp);
-      window.removeEventListener("pointercancel", onUp);
-    };
-  }, []);
-
-  const onPointerDown = (e: React.PointerEvent) => {
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
     dragging.current = true;
+    userInteracted.current = true;
     updateFromClientX(e.clientX);
   };
 
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!dragging.current) return;
+    updateFromClientX(e.clientX);
+  };
+
+  const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+    dragging.current = false;
+  };
+
   const onKeyDown = (e: React.KeyboardEvent) => {
+    userInteracted.current = true;
     if (e.key === "ArrowLeft") setPos((p) => Math.max(0, p - 5));
     if (e.key === "ArrowRight") setPos((p) => Math.min(100, p + 5));
     if (e.key === "Home") setPos(0);
     if (e.key === "End") setPos(100);
   };
 
+  // Auto-demo: animate the slider once when it enters the viewport
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          obs.disconnect();
+          const sequence = [
+            { from: 50, to: 30, dur: 700 },
+            { from: 30, to: 72, dur: 900 },
+            { from: 72, to: 50, dur: 600 },
+          ];
+          let idx = 0;
+          const runStep = () => {
+            if (userInteracted.current || idx >= sequence.length) return;
+            const { from, to, dur } = sequence[idx++];
+            const start = performance.now();
+            const step = (now: number) => {
+              if (userInteracted.current) return;
+              const t = Math.min((now - start) / dur, 1);
+              const eased = 1 - Math.pow(1 - t, 3);
+              setPos(from + (to - from) * eased);
+              if (t < 1) requestAnimationFrame(step);
+              else runStep();
+            };
+            requestAnimationFrame(step);
+          };
+          setTimeout(runStep, 300);
+        });
+      },
+      { threshold: 0.5 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <div
       ref={containerRef}
       className="ba-slider"
       onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
       role="slider"
-      aria-label="Comparateur avant / après"
+      aria-label="Comparateur avant / après — glisser pour comparer"
       aria-valuemin={0}
       aria-valuemax={100}
       aria-valuenow={Math.round(pos)}
