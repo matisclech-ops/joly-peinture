@@ -36,13 +36,6 @@ const ITEMS: Gallery4Item[] = [
     href: "#contact",
     image: "/realisations/papier-peint-wisteria.jpg",
   },
-  {
-    id: "facade",
-    title: "Ravalement de façade",
-    description: "Façades, pignons et volets protégés durablement contre les intempéries.",
-    href: "#contact",
-    image: "/realisations/facade.jpg",
-  },
 ];
 
 export default function Realisations() {
