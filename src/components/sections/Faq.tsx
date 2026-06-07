@@ -2,24 +2,24 @@ import { useState } from "react";
 
 const FAQ = [
   {
-    q: "Intervenez-vous uniquement à Orléans ?",
-    a: "Non, nous intervenons à Orléans et dans un rayon de 45 km : Saint-Jean-de-Braye, Fleury-les-Aubrais, Saran, Olivet, La Chapelle-Saint-Mesmin et toute l'agglomération orléanaise.",
+    q: "Vous n'intervenez qu'à Orléans ?",
+    a: "Non, nous nous déplaçons dans tout le bassin orléanais : Saint-Jean-de-Braye, Fleury-les-Aubrais, Saran, Olivet, La Chapelle-Saint-Mesmin et toutes les communes dans un rayon de 45 km. Le déplacement pour le devis est offert.",
   },
   {
     q: "Le devis est-il vraiment gratuit ?",
-    a: "Oui, totalement gratuit et sans engagement. Nous nous déplaçons pour évaluer vos besoins et vous remettons un devis détaillé sous 48h.",
+    a: "Oui, sans aucun engagement. Nous venons chez vous, nous mesurons, nous discutons de votre projet, et vous recevez un devis détaillé sous 48 heures par mail. C'est ensuite à vous de voir.",
   },
   {
-    q: "Quel est le délai d'intervention ?",
-    a: "Le délai dépend de la taille du chantier et de notre planning. En général, nous pouvons intervenir sous 1 à 3 semaines après validation du devis.",
+    q: "Sous combien de temps pouvez-vous intervenir ?",
+    a: "Entre 1 et 3 semaines après validation du devis, selon la taille du chantier et notre planning. Nous vous donnons toujours une date ferme à l'avance — et nous nous y tenons.",
   },
   {
-    q: "Protégez-vous les meubles et le sol ?",
-    a: "Absolument. La protection de vos biens fait partie intégrante de notre façon de travailler. Meubles, sols et surfaces sont soigneusement protégés avant chaque intervention.",
+    q: "Protégez-vous les meubles et les sols ?",
+    a: "Toujours. Avant le moindre coup de pinceau, meubles, sols, prises et plinthes sont protégés. À la fin du chantier, vous récupérez votre maison telle que vous l'avez laissée — en mieux.",
   },
   {
-    q: "Quels types de travaux réalisez-vous ?",
-    a: "Peinture intérieure (murs, plafonds, boiseries), peinture extérieure et ravalement de façades, enduits décoratifs, pose de papier peint. Pour les particuliers comme pour les professionnels.",
+    q: "Quels types de travaux faites-vous ?",
+    a: "Peinture intérieure (murs, plafonds, boiseries, menuiseries), peinture extérieure et ravalement de façades, enduits décoratifs et pose de papier peint d'art. Pour les particuliers comme pour les professionnels.",
   },
 ];
 

@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="container hero-inner">
         <div className="hero-content">
           <div className="hero-pill">
-            <span className="hero-pill-dot" />⭐ 4.9 · 90 avis Google · Devis gratuit sans engagement
+            <span className="hero-pill-dot" />⭐ 4,9 · 90 avis Google · Devis gratuit sous 48 h
           </div>
           <h1 className="hero-title">
             Votre artisan
@@ -14,9 +14,9 @@ export default function Hero() {
             <em>peintre</em> <span className="hero-img-pill">🖌️</span> à Orléans
           </h1>
           <p className="hero-sub">
-            Peinture intérieure, extérieure et décoration.
+            Peinture intérieure, extérieure et décoration sur mesure.
             <br />
-            Devis gratuit sous 48h — Orléans et 45 km alentours.
+            Devis gratuit sous 48 h — Orléans et 45 km à la ronde.
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn-primary">

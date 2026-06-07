@@ -62,7 +62,7 @@ export default function Testimonials() {
           <br />
           <em>nos clients</em>
         </h2>
-        <p className="text-foreground/60 mt-2">★ 4,9/5 — 90 avis Google vérifiés.</p>
+        <p className="text-foreground/60 mt-2">★ 4,9 sur 90 avis Google vérifiés. Voilà ce qu'ils nous écrivent.</p>
 
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[640px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={15} />

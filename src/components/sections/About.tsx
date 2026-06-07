@@ -13,9 +13,10 @@ export default function About() {
             plus de <em>10 ans</em> à Orléans
           </h2>
           <p>
-            Chez Joly Peinture, chaque chantier est traité avec le même soin : préparation minutieuse des
-            surfaces, protection de vos biens, finitions impeccables. 90 clients Google lui font confiance — et
-            il y tient. Artisan assuré, travaux couverts par la garantie décennale.
+            Depuis plus de 10 ans, Joly Peinture intervient chez les particuliers d'Orléans et de sa région.
+            Chaque chantier suit la même méthode : préparation minutieuse des supports, protection complète des
+            sols et du mobilier, finitions précises. Un soin du détail récompensé par 90 avis Google et une note
+            de 4,9/5. Artisan assuré, garantie décennale comprise.
           </p>
           <div className="about-stats">
             <div className="stat-item reveal">
