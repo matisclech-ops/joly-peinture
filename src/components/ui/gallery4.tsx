@@ -16,8 +16,10 @@ export interface Gallery4Item {
   id: string;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   image: string;
+  beforeImage?: string;
+  afterImage?: string;
 }
 
 export interface Gallery4Props {
@@ -27,6 +29,7 @@ export interface Gallery4Props {
   description?: string;
   items?: Gallery4Item[];
   className?: string;
+  onItemSelect?: (item: Gallery4Item) => void;
 }
 
 const Gallery4 = ({
@@ -36,6 +39,7 @@ const Gallery4 = ({
   description = "Quelques aperçus de nos chantiers de peinture intérieure, extérieure et décoration.",
   items = [],
   className,
+  onItemSelect,
 }: Gallery4Props) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -112,15 +116,32 @@ const Gallery4 = ({
                 key={item.id}
                 className="max-w-[320px] pl-[20px] lg:max-w-[360px]"
               >
-                <a href={item.href} className="group rounded-xl block">
-                  <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                </a>
+                {onItemSelect ? (
+                  <button
+                    type="button"
+                    onClick={() => onItemSelect(item)}
+                    aria-label={`Voir ${item.title} en grand`}
+                    className="group rounded-xl block w-full p-0 border-0 bg-transparent cursor-pointer text-left"
+                  >
+                    <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                  </button>
+                ) : (
+                  <a href={item.href ?? "#"} className="group rounded-xl block">
+                    <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                  </a>
+                )}
               </CarouselItem>
             ))}
           </CarouselContent>
