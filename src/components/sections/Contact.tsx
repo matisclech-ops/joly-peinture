@@ -43,8 +43,8 @@ export default function Contact() {
             <em>Parlons-en.</em>
           </h2>
           <p>
-            Réponse sous 48h. Déplacement gratuit pour tout devis sur Orléans et alentours. Artisan assuré ·
-            garantie décennale.
+            Décrivez-nous votre projet — nous revenons vers vous sous 48 heures. Déplacement gratuit sur Orléans
+            et 45 km à la ronde. Artisan assuré · garantie décennale.
           </p>
           <a
             href="https://wa.me/33651294455?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20des%20travaux%20de%20peinture"
