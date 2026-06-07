@@ -44,7 +44,7 @@ export default function Contact() {
           </h2>
           <p>
             Décrivez-nous votre projet — nous revenons vers vous sous 48 heures. Déplacement gratuit sur Orléans
-            et 45 km à la ronde. Artisan assuré · garantie décennale.
+            et 45 km à la ronde.
           </p>
           <a
             href="https://wa.me/33651294455?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20des%20travaux%20de%20peinture"
