@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 const RED = ["Peinture intérieure", "Façades & ravalement", "Décoration sur mesure", "Orléans et 45 km"];
-const DARK = ["4,9 ★ Google", "90 avis vérifiés", "+10 ans d'expérience", "Devis sous 48 h", "Garantie décennale"];
+const DARK = ["4,9 ★ Google", "90 avis vérifiés", "+10 ans d'expérience", "Devis sous 48 h"];
 
 function Track({ items, reverse }: { items: string[]; reverse?: boolean }) {
   const doubled = [...items, ...items];

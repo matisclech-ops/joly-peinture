@@ -16,7 +16,7 @@ export default function About() {
             Depuis plus de 10 ans, Joly Peinture intervient chez les particuliers d'Orléans et de sa région.
             Chaque chantier suit la même méthode : préparation minutieuse des supports, protection complète des
             sols et du mobilier, finitions précises. Un soin du détail récompensé par 90 avis Google et une note
-            de 4,9/5. Artisan assuré, garantie décennale comprise.
+            de 4,9/5.
           </p>
           <div className="about-stats">
             <div className="stat-item reveal">

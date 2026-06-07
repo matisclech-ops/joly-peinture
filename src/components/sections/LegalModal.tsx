@@ -108,16 +108,7 @@ export default function LegalModal({ open, onClose }: { open: boolean; onClose: 
           </section>
 
           <section>
-            <h3>6. Assurance professionnelle</h3>
-            <p>
-              Joly Peinture est couvert par une assurance responsabilité civile professionnelle ainsi qu'une
-              garantie décennale souscrite auprès de <Todo>compagnie d'assurance — à confirmer</Todo>, pour les
-              chantiers réalisés en France métropolitaine.
-            </p>
-          </section>
-
-          <section>
-            <h3>7. Médiation de la consommation</h3>
+            <h3>6. Médiation de la consommation</h3>
             <p>
               Conformément à l'article L612-1 du Code de la consommation, en cas de litige non résolu à
               l'amiable avec l'entreprise, le consommateur peut recourir gratuitement au service de médiation
